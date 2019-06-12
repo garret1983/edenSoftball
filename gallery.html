@@ -19,12 +19,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Eden Softball</title>
   </head>
-
   <body data-spy="scroll" data-target="main-nav" id="home">
     <nav class="navbar navbar-expand-sm bg-white fixed-top" id="main-nav">
       <div class="container">
         <!-- ENTER NAME OR LOGO AFTER "NAVBAR BRAND" IF NEEDED -->
-        <a href="./index.html" class="navbar-brand"></a>
+        <a href="index.html" class="navbar-brand"></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -39,7 +38,7 @@
           <ul class="navbar-nav ml-auto">
             <!-- home, contact, collage picks, academics, travel team -->
             <li class="nav-item">
-              <a href="./index.html" class="nav-link text-dark">Take me Home</a>
+              <a href="./index.html" class="nav-link text-dark">Home</a>
             </li>
 
             <!-- ADD EXTRA LINKS BELOW IF NEEDED  -->
@@ -51,5 +50,50 @@
         </div>
       </div>
     </nav>
+
+    <!-- PLACE IMAGES/VIDEO BELOW HERE -->
+
+    <!-- KEEP JQUERY BELOW THIS LINE  -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+      integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // current year for copy right
+      $("#year").text(new Date().getFullYear());
+
+      //   scroll spy
+      $("body").scrollspy({ target: "main-nav" });
+
+      $("main-nav a").on("click", function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+
+          const hash = this.hash;
+
+          $("html, body").aniamte(
+            {
+              scrollTop: $(hash).offset().top
+            },
+            800,
+            function() {
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
+    </script>
   </body>
 </html>
