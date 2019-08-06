@@ -20,7 +20,7 @@
     <title>Eden Softball</title>
   </head>
   <body data-spy="scroll" data-target="main-nav" id="home">
-    <nav class="navbar navbar-expand-sm bg-white fixed-top" id="main-nav">
+    <nav class="navbar navbar-expand-sm bg-secondary fixed-top" id="main-nav">
       <div class="container">
         <!-- ENTER NAME OR LOGO AFTER "NAVBAR BRAND" IF NEEDED -->
         <a href="index.html" class="navbar-brand"></a>
@@ -31,7 +31,7 @@
           data-target="#navbarCollapse"
         >
           <span
-            class="navbar-toggler-icon bg-secondary fas fa-bars pt-1"
+            class="navbar-toggler-icon bg-secondary fas fa-bars"
           ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -53,33 +53,91 @@
     <br />
 
     <!-- PLACE IMAGES/VIDEO BELOW HERE -->
+  </br>
+    <div class="row">
+      <div class="container">
+        <!-- image one -->
+        <img
+          src="img/eden.png"
+          alt=""
+          class="img-fluid py-4 square"
+          width="200"
+          height="145"
+        />
+        <div>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="modal"
+            data-target="#myModal1"
+          >
+            View Larger
+          </button>
+        </div>
+      </br>
 
-    <div class="container">
-      <img
-        src="img/eden.png"
-        alt=""
-        class="img-fluid pb-4 square"
-        width="250"
-        height="195"
-      />
-      <div>
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#myModal1"
-        >
-          View Larger
-        </button>
+        <!-- image two -->
+        <img
+          src="img/eden.png"
+          alt=""
+          class="img-fluid square"
+          width="200"
+          height="145"
+        />
+        <div>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="modal"
+            data-target="#myModal2"
+          >
+            View Larger
+          </button>
+        </div>
       </div>
     </div>
-    <!-- The Modal -->
+
+    <!-- Modals -->
+    <!-- modal one -->
     <div class="modal" id="myModal1">
       <div class="modal-dialog">
         <div class="modal-content">
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Firecrackers 14u 2023</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <img
+              src="img/eden.png"
+              alt=""
+              class="img-fluid pb-4 square"
+              width="500"
+              height="445"
+            />
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal two -->
+    <div class="modal" id="myModal2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">insert text here</h4>
             <button type="button" class="close" data-dismiss="modal">
               &times;
             </button>
